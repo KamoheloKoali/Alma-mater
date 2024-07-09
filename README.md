@@ -1,1 +1,1 @@
-<h1 align="center">Chat App for students in school all around the world</h1>
+<h1 align="center">Chat App for students all around the world</h1>
