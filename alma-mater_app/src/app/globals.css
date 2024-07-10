@@ -16,7 +16,7 @@
   }
 } */
 
-body {
+.center {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +24,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.right-shadow {
+
+  box-shadow: 8px 5px 4px rgba(0, 0, 0, 0.2) /* Adjust values as needed */
 }
 
 @layer utilities {
