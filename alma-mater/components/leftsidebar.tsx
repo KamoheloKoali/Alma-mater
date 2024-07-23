@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { BsPlus, BsFillLightningFill, BsGearFill } from 'react-icons/bs';
+import { BsPlus, BsFillLightningFill, BsGearFill, BsSearch, BsSubscript } from 'react-icons/bs';
 import { FaFire, FaPoo } from 'react-icons/fa';
 
 interface SideBarIconProps {
@@ -20,10 +20,11 @@ const LeftSidebar: React.FC = () => {
   return (
     <div className='flex top-0 left-0 w-16 m-0 flex-col bg-white text-white shadow-sm'>
       <SideBarIcon icon={<FaFire />} text={'Home'}/>
-      <SideBarIcon icon={<BsPlus />} text={'Home'}/>
-      <SideBarIcon icon={<BsFillLightningFill />} text={'Home'}/>
-      <SideBarIcon icon={<BsGearFill />} text={'Home'}/>
-      <SideBarIcon icon={<FaPoo />} text={'Home'}/>
+      <hr className='my-4 border-t border-gray-300'/>
+      <SideBarIcon icon={<BsSearch />} text={'Search'}/>
+      <SideBarIcon icon={<BsFillLightningFill />} text={'Favorites'}/>
+      <SideBarIcon icon={<BsGearFill />} text={'Settings'}/>
+      <SideBarIcon icon={<FaPoo />} text={'Manage Subscriptions'}/>
     </div>
   );
 };
