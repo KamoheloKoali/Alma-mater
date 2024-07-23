@@ -24,7 +24,7 @@ export default function RootLayout({
           <div className="flex bg-offBlack text-lightGray p-6 h-full w-full">
             <LeftSidebar />
             {children}
-            <RightSidebar />
+            {/* <RightSidebar /> */}
           </div>
         </main>
 

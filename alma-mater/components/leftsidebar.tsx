@@ -1,51 +1,31 @@
-import React from 'react'
+import React, { ReactNode } from 'react';
+import { BsPlus, BsFillLightningFill, BsGearFill } from 'react-icons/bs';
+import { FaFire, FaPoo } from 'react-icons/fa';
 
-function LeftSidebar() {
-  return (
-      <aside className="w-64 bg-card p-4 flex flex-col justify-between bg-black">
-              <div>
-                <div className="flex items-center space-x-2 mb-8">
-                  <img src="https://placehold.co/32x32" alt="Brainwave logo" className="w-8 h-8" />
-                  <span className="text-xl font-bold">Brainwave</span>
-                </div>
-                <nav className="space-y-4">
-                  <a href="#" className="flex items-center space-x-2 p-2 rounded-md bg-secondary text-secondary-foreground">
-                    <span>Chats</span>
-                  </a>
-                  <a href="#" className="flex items-center space-x-2 p-2 rounded-md hover:bg-muted">
-                    <span>Search</span>
-                  </a>
-                  <a href="#" className="flex items-center space-x-2 p-2 rounded-md hover:bg-muted">
-                    <span>Manage subscription</span>
-                  </a>
-                  <a href="#" className="flex items-center space-x-2 p-2 rounded-md hover:bg-muted">
-                    <span>Updates & FAQ</span>
-                  </a>
-                  <a href="#" className="flex items-center space-x-2 p-2 rounded-md hover:bg-muted">
-                    <span>Settings</span>
-                  </a>
-                </nav>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <img src="https://placehold.co/32x32" alt="User avatar" className="w-8 h-8 rounded-full" />
-                  <div>
-                    <span className="block font-bold">Tran Mau Tri Tam</span>
-                    <span className="block text-sm text-muted-foreground">tam@ui8.net</span>
-                  </div>
-                </div>
-                <button className="w-full py-2 bg-primary text-primary-foreground rounded-md">Upgraded to Pro</button>
-                {/* <div className="flex justify-between items-center">
-                  <span>Light</span>
-                  <label className="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" className="sr-only peer" />
-                    <div className="w-11 h-6 bg-zinc-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary rounded-full peer dark:bg-zinc-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-zinc-600 peer-checked:bg-primary"></div>
-                  </label>
-                  <span>Dark</span>
-                </div> */}
-              </div>
-            </aside>
-  )
+interface SideBarIconProps {
+  icon: ReactNode;
+  text: ReactNode;
 }
 
-export default LeftSidebar
+const SideBarIcon: React.FC<SideBarIconProps> = ({ icon, text }) => (
+  <div className='sidebar-icon group'>
+    {icon}
+    <span className='sidebar-tooltip group-hover:scale-100'>
+      {text}
+    </span>
+  </div>
+);
+
+const LeftSidebar: React.FC = () => {
+  return (
+    <div className='flex top-0 left-0 w-16 m-0 flex-col bg-white text-white shadow-sm'>
+      <SideBarIcon icon={<FaFire />} text={'Home'}/>
+      <SideBarIcon icon={<BsPlus />} text={'Home'}/>
+      <SideBarIcon icon={<BsFillLightningFill />} text={'Home'}/>
+      <SideBarIcon icon={<BsGearFill />} text={'Home'}/>
+      <SideBarIcon icon={<FaPoo />} text={'Home'}/>
+    </div>
+  );
+};
+
+export default LeftSidebar;
