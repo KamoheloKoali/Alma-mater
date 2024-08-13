@@ -1,7 +1,7 @@
 export default function Home() {
   return (
 
-    <div className=" flex bg-card  h-full center w-full rounded-lg">
+    <div className=" flex bg-card bg-gray-100  h-full center w-full rounded-tl-3xl border-t border-l mt-[0]">
       <div className="space-y-4 p-6 right-shadow h-[100%] w-[80%]">
         <h1 className="text-2xl font-bold mb-2">Unlock the power of AI</h1>
         <p className="text-muted-foreground mb-6">Chat with the smartest AI - Experience the power of AI with us</p>

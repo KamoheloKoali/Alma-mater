@@ -1,8 +1,8 @@
+import Header from "@/components/header";
+import LeftSidebar from "@/components/leftsidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import LeftSidebar from "@/components/leftsidebar";
-import RightSidebar from "@/components/rightsidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Alma-Mater</title>
+      </head>
       <body className="flex font-sans h-screen bg-background text-foreground">
 
         <main className={inter.className}>
+          <Header />
           <div className="flex bg-offBlack text-lightGray p-6 h-full w-full">
             <LeftSidebar />
             {children}
